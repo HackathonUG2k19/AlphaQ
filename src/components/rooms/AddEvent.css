@@ -6,10 +6,6 @@ form {
     margin: 0 auto;
 }
 
-form .input {
-    max-width: 500px;
-}
-
 .form-title {
     color: white;
     margin-bottom: 0.5rem;

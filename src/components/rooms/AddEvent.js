@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux';
+
+import { addEvent } from '../../store/actions/eventActions';
 
 import './AddEvent.css';
 
@@ -16,9 +19,11 @@ class AddEvent extends Component {
     }
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state);
+        this.props.addEvent(this.state);
         this.setState({ name: "", desc: "", venue: "", time: "", date: "" });
         document.querySelectorAll('label').forEach(label => label.style.transform = "translateY(-2rem) scale(1)");
+        console.log(this.state.roomID);
+        this.props.history.push(`/room/${this.state.roomID}`);
     }
     componentDidMount() {
         document.querySelectorAll('.input').forEach(input => {
@@ -76,4 +81,10 @@ class AddEvent extends Component {
     }
 };
 
-export default AddEvent;
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addEvent: (event) => dispatch(addEvent(event))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(AddEvent);
