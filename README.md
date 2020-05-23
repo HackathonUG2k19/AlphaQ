@@ -1,2 +1,2 @@
-# AlphaQ
-AlphaQ submission repo, only merger to this repo after work on your personal team repo (if you have one)
+# AnnounceIT
+AlphaQ's submission for HackathonUG2k19. A "noticeboard" application to keep you updated in the circles you care about.

@@ -1,0 +1,39 @@
+.Room {
+    margin: auto;
+    height: 98vh;
+}
+
+.RoomTitle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100vw;
+}
+
+.RoomTitle .title {
+    background-color: var(--bg-secondary);
+    height: 5rem;
+}
+
+.RoomTitle .meta-data {
+    background-color: var(--bg-primary);
+    padding-left: 6rem;
+    padding-right: 2rem;
+}
+
+.bg-custom {
+    background-color: var(--bg-secondary);
+}
+
+.RoomBody {
+    padding-top: 8rem;
+}
+
+.event-data {
+    list-style: none;
+}
+
+.bottom-data {
+    border-top: 1px solid var(--text-primary);
+}
