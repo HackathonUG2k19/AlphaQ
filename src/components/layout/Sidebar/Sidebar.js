@@ -15,7 +15,7 @@ const Sidebar = () => {
             <ul className='r-side-nav'>
                 <li className='r-nav-logo'>
                     <Link to='/' className='r-nav-link active'>
-                        <span className='r-link-text'>Announce IT</span>
+                        <span className='r-link-text'>Announce iiIT</span>
                         <FontAwesomeIcon className='r-link-icon' icon={faBullhorn} />
                     </Link>
                 </li>
