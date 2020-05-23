@@ -32,7 +32,7 @@ class AddEvent extends Component {
                     document.querySelector(`label[for=${input.name}]`).style.transform = "translateY(-2rem) scale(1)";
             })
         })
-        this.setState({ roomID: this.props.location.pathname.split('/')[2] })
+        this.setState({ roomID: this.props.location.pathname.split('/')[2] });
     }
     render() {
         return (

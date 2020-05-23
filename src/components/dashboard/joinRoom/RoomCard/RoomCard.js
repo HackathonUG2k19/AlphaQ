@@ -10,7 +10,7 @@ const RoomCard = ({ roomData, joinRoom }) => {
         joinRoom(roomData);
     }
     return (
-        <div className="r-card mx-2" style={{ width: "18rem" }}>
+        <div className="r-card m-2" style={{ width: "18rem" }}>
             <div className="r-card-body text-center text-white" >
                 <h5 className="card-title">{roomData.name}</h5>
                 <h6 className="card-subtitle mb-2 text-muted">{roomData.tagline}</h6>

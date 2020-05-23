@@ -21,8 +21,9 @@ const initState = {
 const roomReducer = (state = initState, action) => {
     switch (action.type) {
         case "CREATE_ROOM":
-            console.log('created room', action.room);
-            return state;
+            let newRooms = initState.rooms;
+            newRooms.push(action.room);
+            return { ...state, rooms: newRooms };
         default:
             return state;
     }

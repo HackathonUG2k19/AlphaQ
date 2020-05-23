@@ -9,9 +9,9 @@ class MyRooms extends Component {
         const myRooms = rooms.filter(room => {
             return (myRoomList.indexOf(room.id.toString()) !== -1);
         })
-        const RoomData = myRooms.map(room => {
+        const RoomData = myRooms.length ? myRooms.map(room => {
             return <RoomCard roomData={{ name: room.name, tagline: room.tagline, room_id: room.id }} key={room.id} />;
-        })
+        }) : <h1 className='display-3 text-center col-12'>Looks a litte empty here :(</h1>
         return (
             <div className='MyRooms'>
                 <div className='row'>

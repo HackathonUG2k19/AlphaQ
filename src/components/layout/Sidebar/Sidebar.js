@@ -20,7 +20,7 @@ const Sidebar = () => {
                     </Link>
                 </li>
                 <SignedInLinks />
-                <SignedOutLinks />
+                {/* <SignedOutLinks /> */}
             </ul>
         </nav >
     )
