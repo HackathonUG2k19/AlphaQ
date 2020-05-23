@@ -3,17 +3,14 @@ import { connect } from 'react-redux';
 
 import RoomCard from './RoomCard/RoomCard';
 
-class MyRooms extends Component {
+class RoomList extends Component {
     render() {
-        const { rooms, myRoomList } = this.props;
-        const myRooms = rooms.filter(room => {
-            return (myRoomList.indexOf(room.id.toString()) !== -1);
-        })
-        const RoomData = myRooms.map(room => {
+        const { rooms } = this.props;
+        const RoomData = rooms.map(room => {
             return <RoomCard roomData={{ name: room.name, tagline: room.tagline, room_id: room.id }} key={room.id} />;
         })
         return (
-            <div className='MyRooms'>
+            <div className='RoomList'>
                 <div className='row'>
                     {RoomData}
                 </div>
@@ -24,9 +21,8 @@ class MyRooms extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        rooms: state.room.rooms,
-        myRoomList: state.myRooms.myRooms
+        rooms: state.room.rooms
     }
 }
 
-export default connect(mapStateToProps)(MyRooms);
+export default connect(mapStateToProps)(RoomList);

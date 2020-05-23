@@ -10,6 +10,7 @@ import 'popper.js';
 import Sidebar from './components/layout/Sidebar/Sidebar';
 import Dashboard from './components/dashboard/Dashboard';
 import CreateRoom from './components/dashboard/createRoom/CreateRoom';
+import JoinRoom from './components/dashboard/joinRoom/JoinRoom';
 import Room from './components/rooms/Room';
 import AddEvent from './components/rooms/AddEvent';
 import SignIn from './components/auth/SignIn';
@@ -27,6 +28,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={Dashboard} />
             <Route exact path="/createRoom" component={CreateRoom} />
+            <Route exact path="/joinRoom" component={JoinRoom} />
             <Route exact path="/room/:room_id" component={Room} />
             <Route exact path="/room/:room_id/addEvent" component={AddEvent} />
             <Route exact path="/signIn" component={SignIn} />

@@ -19,7 +19,13 @@ const initState = {
 }
 
 const roomReducer = (state = initState, action) => {
-    return state;
+    switch (action.type) {
+        case "CREATE_ROOM":
+            console.log('created room', action.room);
+            return state;
+        default:
+            return state;
+    }
 }
 
 export default roomReducer;

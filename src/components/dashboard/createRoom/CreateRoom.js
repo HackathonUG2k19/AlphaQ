@@ -1,18 +1,23 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux';
+import { createRoom } from '../../../store/actions/roomActions';
+import { v4 } from 'uuid';
 
 import './CreateRoom.css';
+
 
 class CreateRoom extends Component {
     state = {
         name: "",
         tagline: "",
+        id: v4()
     }
     handleChange = (e) => {
         this.setState({ [e.target.id]: e.target.value });
     }
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state);
+        this.props.createRoom(this.state);
         this.setState({ name: "", tagline: "" });
         document.querySelectorAll('label').forEach(label => label.style.transform = "translateY(-2rem) scale(1)");
     }
@@ -57,4 +62,10 @@ class CreateRoom extends Component {
     }
 };
 
-export default CreateRoom;
+const mapDispatchToProps = (dispatch) => {
+    return {
+        createRoom: (room) => dispatch(createRoom(room))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(CreateRoom);

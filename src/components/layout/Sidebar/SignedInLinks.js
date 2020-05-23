@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPersonBooth, faPlus, faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
 
@@ -8,15 +8,15 @@ const SignedOutLinks = () => {
     return (
         <React.Fragment>
             <li className='r-nav-item'>
-                <a href='/' className='r-nav-avatar' onClick={(e) => e.preventDefault()}>
+                <Link to='/' className='r-nav-avatar'>
                     <button className='avatar'>DK</button>
                     <span className='r-link-text'>Dhruv Kapur</span>
-                </a>
+                </Link>
             </li>
             <li className='r-nav-item'>
-                <NavLink to='/' exact className='r-nav-link'>
+                <NavLink to='/joinRoom' exact className='r-nav-link'>
                     <FontAwesomeIcon className='r-link-icon' icon={faPersonBooth} />
-                    <span className='r-link-text'>My Rooms</span>
+                    <span className='r-link-text'>Join Room</span>
                 </NavLink>
             </li>
             <li className='r-nav-item'>
