@@ -27,3 +27,10 @@ To run the server
 - While writing event descriptions, the line is cut off short too quickly ✅
 - Redirection to room's page after adding an event ✅
 - That's all
+
+## Future Implementations
+
+- Converting it to a mobile app
+- Push Notifications
+- Vote Poll
+- Something this basic can be integrated well with IIIT (using their Authentication) because not everyone checks facebook on daily basis
