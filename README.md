@@ -21,7 +21,7 @@ To run the server
 
 ## Some features to add
 
-- Once Joined a room, <button>Join room</button> should change to <button>Joined</button>
+- Once Joined a room, <button>Join room</button> should change to <button>Joined</button> => (<span>Joined<span>) ✅
 - Sign In / Sign Out -> selective viewership only
 - Maybe have some admin acceses like moderator settings
 - While writing event descriptions, the line is cut off short too quickly
