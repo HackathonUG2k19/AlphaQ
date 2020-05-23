@@ -20,6 +20,7 @@ class CreateRoom extends Component {
         this.props.createRoom(this.state);
         this.setState({ name: "", tagline: "" });
         document.querySelectorAll('label').forEach(label => label.style.transform = "translateY(-2rem) scale(1)");
+        this.props.history.push("/joinRoom")
     }
     componentDidMount() {
         document.querySelectorAll('.input').forEach(input => {
