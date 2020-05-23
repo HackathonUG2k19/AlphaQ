@@ -1,0 +1,139 @@
+/* .Sidebar > .r-side-nav > .r-nav-logo & .r-nav-item > .r-nav-link > .r-link-text & .r-link-icon */
+
+.Sidebar {
+    position: fixed;
+    background-color: var(--bg-primary);
+    transition: width 200ms;
+    z-index: 10;
+}
+
+.Sidebar:hover .r-nav-logo svg {
+    transform: rotateY(-180deg);
+}
+
+.r-side-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.r-nav-logo {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--text-secondary);
+    background-color: var(--bg-secondary);
+    font-size: 1.5rem;
+    letter-spacing: 0.3ch;
+    width: 100%
+}
+
+.r-nav-logo svg {
+    transform: rotateY(0);
+    transition: transform var(--transition-speed);
+}
+
+.r-nav-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition: var(--transition-speed);
+}
+
+.r-nav-link:hover {
+    filter: grayscale(0) opacity(1);
+    background-color: var(--bg-secondary);
+    text-decoration: none;
+}
+
+.r-link-text {
+    display: none;
+    margin-left: 1rem;
+    color: #40E0D0;
+}
+
+.r-link-icon {
+    font-size: 2rem;
+    color: #40E0D0;
+    margin: 1rem 1.5rem;
+    transition: var(--transition-speed);
+}
+
+.active {
+    filter: grayscale(0) opacity(1);
+    background-color: var(--bg-secondary);
+}
+
+.r-nav-avatar {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    text-decoration: none;
+    filter: grayscale(0) opacity(1);
+}
+
+.r-nav-avatar:hover {
+    text-decoration: none;
+}
+
+.avatar {
+    font-size: 1.5rem;
+    margin: 1rem 1rem;
+    padding: 0.3rem 0.3rem;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    border: none;
+    background-color: #40E0D0;
+    filter: grayscale(0) opacity(1);
+    color: white;
+}
+
+.avatar:focus {
+    outline: none;
+}
+
+.push-end {
+    margin-top: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .Sidebar {
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+    }
+
+    .r-nav-logo {
+        display: none;
+    }
+
+    .r-side-nav {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .Sidebar {
+        top: 0;
+        width: 5rem;
+        height: 100vh;
+    }
+
+    .Sidebar:hover {
+        width: 16rem;
+    }
+
+    .Sidebar:hover .r-link-text {
+        display: block;
+        transition: opacity var(--transition-speed);
+    }
+}
