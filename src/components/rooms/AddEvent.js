@@ -8,7 +8,8 @@ class AddEvent extends Component {
         desc: "",
         venue: "",
         time: "",
-        date: ""
+        date: "",
+        roomID: ""
     }
     handleChange = (e) => {
         this.setState({ [e.target.id]: e.target.value });
@@ -31,6 +32,7 @@ class AddEvent extends Component {
                     document.querySelector(`label[for=${input.name}]`).style.transform = "translateY(-2rem) scale(1)";
             })
         })
+        this.setState({ roomID: this.props.location.pathname.split('/')[2] })
     }
     render() {
         return (

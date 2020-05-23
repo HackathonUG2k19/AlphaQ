@@ -16,7 +16,7 @@ class RoomBody extends Component {
                     date: event.date,
                     author: event.author,
                     postDate: event.postDate
-                }} />
+                }} key={event.id} />
             )
         }) : (<h1 className='display-1 text-center'>No Events Yet!</h1>)
         return (

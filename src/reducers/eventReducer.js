@@ -4,6 +4,7 @@
 
 const initState = {
     1: [{
+        id: "1.1",
         name: "ICPC Rule Explanation",
         desc: "Guidelines to giving ICPC",
         venue: "Amphi",
@@ -13,6 +14,7 @@ const initState = {
         postDate: "14/08/2020"
     },
     {
+        id: "1.2",
         name: "Flow Networks Discussion",
         desc: "Discussion on Solving Unconventional Problems by apporaching them as Flow Problems",
         venue: "CR-1",
@@ -22,6 +24,7 @@ const initState = {
         postDate: "10/07/2020"
     }],
     2: [{
+        id: "2.1",
         name: "FlashMob",
         desc: "FlashMob Practice for Felicity",
         venue: "Yoga Room",
@@ -31,6 +34,7 @@ const initState = {
         postDate: "10/02/2020"
     },
     {
+        id: "2.2",
         name: "Hip Hop Workshop",
         desc: "A Dance workshop that'll teach you moves for every beat",
         venue: "Yoga Hall",
