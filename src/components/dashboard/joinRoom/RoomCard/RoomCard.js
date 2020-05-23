@@ -4,22 +4,34 @@ import { connect } from 'react-redux';
 import './RoomCard.css';
 import { joinRoom } from '../../../../store/actions/myRoomActions';
 
-const RoomCard = ({ roomData, joinRoom }) => {
-    const handleJoin = (e) => {
-        // console.log("Joining ", roomData);
-        joinRoom(roomData);
+class RoomCard extends React.Component {
+    handleJoin = (e) => {
+        this.props.joinRoom(this.props.roomData);
+        this.forceUpdate();
     }
-    return (
-        <div className="r-card m-2" style={{ width: "18rem" }}>
-            <div className="r-card-body text-center text-white" >
-                <h5 className="card-title">{roomData.name}</h5>
-                <h6 className="card-subtitle mb-2 text-muted">{roomData.tagline}</h6>
-                <div className='action-buttons row justify-content-around'>
-                    <button className='btn btn-outline-success' onClick={handleJoin}>Join Room</button>
+    render() {
+        const { roomData, myRooms } = this.props;
+        const joinElement = myRooms.indexOf(roomData.room_id) === -1 ? (<button className='btn btn-outline-success' onClick={this.handleJoin}>Join Room</button>)
+            : (<span className='text-success'>Joined!</span>);
+        return (
+
+            <div className="r-card m-2" style={{ width: "18rem" }}>
+                <div className="r-card-body text-center text-white" >
+                    <h5 className="card-title">{roomData.name}</h5>
+                    <h6 className="card-subtitle mb-2 text-muted">{roomData.tagline}</h6>
+                    <div className='action-buttons row justify-content-around'>
+                        {joinElement}
+                    </div>
                 </div>
             </div>
-        </div >
-    )
+        )
+    }
+}
+
+const mapStateToProps = (state) => {
+    return {
+        myRooms: state.myRooms.myRooms
+    }
 }
 
 const mapDispatchToProps = (dispatch) => {
@@ -28,4 +40,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(null, mapDispatchToProps)(RoomCard);
+export default connect(mapStateToProps, mapDispatchToProps)(RoomCard);

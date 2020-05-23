@@ -7,7 +7,7 @@ import { faBullhorn } from '@fortawesome/free-solid-svg-icons'
 
 import './Sidebar.css'
 import SignedInLinks from './SignedInLinks'
-import SignedOutLinks from './SignedOutLinks'
+// import SignedOutLinks from './SignedOutLinks'
 
 const Sidebar = () => {
     return (
