@@ -26,3 +26,4 @@ To run the server
 - Maybe have some admin acceses like moderator settings
 - While writing event descriptions, the line is cut off short too quickly
 - Redirection to room's page after adding an event
+- That's all
