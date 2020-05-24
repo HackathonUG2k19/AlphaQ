@@ -25,3 +25,6 @@ To run the server
 - Enabling Push Notifications for the rooms the user is a part of
 - Vote Poll on events, people interested and not interested
 - Something this basic can be integrated well with IIIT (using CAS) because not everyone checks facebook on daily basis
+
+## Important Note
+The application currently doesn't support persistent data storage and user authentication. However, a proof of concept regarding Read/Write operations to a Firestore Cloud Database is included.

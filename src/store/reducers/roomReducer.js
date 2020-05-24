@@ -24,6 +24,9 @@ const roomReducer = (state = initState, action) => {
             let newRooms = initState.rooms;
             newRooms.push(action.room);
             return { ...state, rooms: newRooms };
+        case "CREATE_ROOM_ERROR":
+            console.log("Error creating new room! ", action.err);
+            return state;
         default:
             return state;
     }
