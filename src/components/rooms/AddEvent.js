@@ -22,7 +22,6 @@ class AddEvent extends Component {
         this.props.addEvent(this.state);
         this.setState({ name: "", desc: "", venue: "", time: "", date: "" });
         document.querySelectorAll('label').forEach(label => label.style.transform = "translateY(-2rem) scale(1)");
-        console.log(this.state.roomID);
         this.props.history.push(`/room/${this.state.roomID}`);
     }
     componentDidMount() {
