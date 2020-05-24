@@ -12,7 +12,7 @@ class RoomCard extends React.Component {
     render() {
         const { roomData, myRooms } = this.props;
         const joinElement = myRooms.indexOf(roomData.room_id) === -1 ? (<button className='btn btn-outline-success' onClick={this.handleJoin}>Join Room</button>)
-            : (<button type="button" class="btn btn-secondary" disabled>Joined!</button>);
+            : (<button type="button" className="btn btn-secondary" disabled>Joined!</button>);
         return (
 
             <div className="r-card m-2" style={{ width: "18rem" }}>

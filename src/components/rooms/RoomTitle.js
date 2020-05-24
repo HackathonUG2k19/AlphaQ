@@ -10,11 +10,11 @@ const RoomTitle = (props) => {
                 <h1 className='display-4 col-12 text-center'> {roomData.name}</h1>
             </div>
             <div className='row meta-data justify-content-between py-2'>
-                <div className='row col-12 col-md-6 justify-content-between'>
+                <div className='row col-12 justify-content-between'>
                     <p className='mt-2 mb-0 room-id'>RoomID: {props.room_id}</p>
                     <h5 className='mt-2'>{roomData.tagline}</h5>
+                    <Link to={`${props.location.pathname}/addEvent`} className='btn btn-outline-success'>Add Event</Link>
                 </div>
-                <Link to={`${props.location.pathname}/addEvent`} className='btn btn-outline-success'>Add Event</Link>
             </div>
         </div >
     )
