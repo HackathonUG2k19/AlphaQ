@@ -9,8 +9,8 @@ const SignedOutLinks = () => {
         <React.Fragment>
             <li className='r-nav-item'>
                 <Link to='/' className='r-nav-avatar'>
-                    <button className='avatar'>DK</button>
-                    <span className='r-link-text'>Dhruv Kapur</span>
+                    <button className='avatar'>RK</button>
+                    <span className='r-link-text'>Ritvik Aryan Kalra</span>
                 </Link>
             </li>
             <li className='r-nav-item'>
