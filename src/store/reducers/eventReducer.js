@@ -57,7 +57,7 @@ const projectReducer = (state = initState, action) => {
             let thisRoomEvents = state[action.event.roomID];
             if (!thisRoomEvents)
                 thisRoomEvents = [];
-            thisRoomEvents.push({ ...action.event, id: v4(), author: "Ritvik Aryan Kalra", postDate: "06/03/2020" });
+            thisRoomEvents.push({ ...action.event, id: v4(), author: "Ritvik Aryan Kalra", postDate:"24/05/2020" });
             return { ...state, [action.event.roomID]: thisRoomEvents };
         default:
             return state;
